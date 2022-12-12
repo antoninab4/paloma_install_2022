@@ -139,3 +139,63 @@ palomad q staking validator $(palomad keys show wallet --bech val -a)
 ```
 https://paloma.explorers.guru/validators
 ```
+
+# Ниже все полезные команды, только меняйте свои ники или кошелек на свой
+
+### Кошельки
+
+#### Добавить новый кошелек (создать)
+```
+palomad keys add ваш_ник_или_кошелек
+```
+### восстановить ваш ранее созданный
+```
+palomad keys add ваш_ник_или_кошелек --recover
+```
+### список всех кошельков
+```
+palomad keys list
+```
+### Удалить кошелек
+```
+palomad keys delete ваш_ник_или_кошелек
+```
+# делегирование
+```
+palomad tx staking delegate адрес валидатора 1000000ugrain --from ваш_кошелек --chain-id paloma-testnet-13 --gas-prices 0.1ugrain --gas-adjustment 1.5 --gas auto -y 
+```
+
+
+## Service Management
+
+### Reload Services
+
+sudo systemctl daemon-reload
+
+### Enable Service
+
+sudo systemctl enable palomad
+
+### Disable Service
+
+sudo systemctl disable palomad
+
+### Run Service
+
+sudo systemctl start palomad
+
+### Stop Service
+
+sudo systemctl stop palomad
+
+### Restart Service
+
+sudo systemctl restart palomad
+
+### Check Service Status
+
+sudo systemctl status palomad
+
+### Check Service Logs
+
+sudo journalctl -u palomad -f --no-hostname -o cat
