@@ -72,6 +72,15 @@ BSC_SIGNING_KEY=0x$(cat $HOME/.pigeon/keys/evm/bnb-main/*  | jq -r .address | he
 ```
 ## команда будет пополнять баланс автоматически, каждый день, чтобы вы не потеряли свои средства на оба кошелька
 
+### Проверить адрес пополнения ETH
+```
+echo "0x$(cat $HOME/.pigeon/keys/evm/eth-main/*  | jq -r .address | head -n 1)"
+```
+### проверить адрес для пополнения BNB
+```
+echo "0x$(cat $HOME/.pigeon/keys/evm/bnb-main/*  | jq -r .address | head -n 1)" 
+```
+
 ## Создаем сервисный файл (копируем все целиком и выполняем)
 ```
 sudo tee $HOME/.pigeon/env.sh > /dev/null << EOF
