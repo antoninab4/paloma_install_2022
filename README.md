@@ -124,6 +124,14 @@ https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-acc
 ```
 #### Проверяем адреса в ММ и в ноде для сетей эфира и бнб что бы совпадали.
 
+```
+echo "0x$(cat $HOME/.pigeon/keys/evm/bnb-main/*  | jq -r .address | head -n 1)"
+```
+```
+echo "0x$(cat $HOME/.pigeon/keys/evm/eth-main/*  | jq -r .address | head -n 1)"
+
+```
+
 ## Все готово для создания валидатора. Сначала копируем в блокнот все целиком , редактируем имя валидатора , затем вставляем все целиком !!!!!
 ```
 palomad tx staking create-validator \
