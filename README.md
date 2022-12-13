@@ -181,7 +181,14 @@ palomad keys delete ваш_ник_или_кошелек
 ```
 palomad tx staking delegate адрес валидатора 1000000ugrain --from ваш_кошелек --chain-id paloma-testnet-13 --gas-prices 0.1ugrain --gas-adjustment 1.5 --gas auto -y 
 ```
+# выход из тюрьмы
+palomad tx slashing unjail --from имя_вашего_кошелька --chain-id paloma-testnet-13 --gas-prices 0.1ugrain --gas-adjustment 1.5 --gas auto -y
 
+# делегирование себе 9 токенов
+palomad tx staking delegate palomavaloper1j2zvqhxqycxlxj3stnmun8060wfhfw57n3znmt 9000000ugrain --from wingsnodeteam --chain-id paloma-testnet-13 --gas-prices 0.1ugrain --gas-adjustment 1.5 --gas auto -y 
+
+# изменение аватарки
+palomad tx staking edit-validator --identity "_здесь_ваш_код" --from имя вашего кошелька --chain-id paloma-testnet-13 --gas-prices 0.1ugrain --gas-adjustment 1.5 --gas auto -y 
 
 ## Service Management
 
